@@ -2,6 +2,7 @@
 %html
   %head
     %title Uwe Kleinmann &laquo; Personal homepage
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
     
     %link{:rel => "stylesheet", :href => "/css/bp/screen.css", :type => "text/css", :media => "screen,projection", :charset => "utf-8"}
     %link{:rel => "stylesheet", :href => "/css/bp/print.css", :type => "text/css", :media => "print", :charset => "utf-8"}
@@ -14,7 +15,13 @@
   %body
     %div.container
       %h1.column.span-24
-        (i)Uwe Kleinmann
+        %a{:href => "/"} (i)Uwe Kleinmann
       
       %div#content
         = yield
+      
+      %div#footer.span-24
+        &copy; 2010 by Uwe Kleinmann. All rights reserved.
+        %br
+        %a{:href => "/impressum"} Impressum
+        (required by german law)

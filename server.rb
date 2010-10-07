@@ -17,3 +17,7 @@ end
 get '/' do
   haml :index
 end
+
+get '/impressum' do
+  haml :impressum
+end
