@@ -15,10 +15,6 @@ h1 a:hover {
 	color:#aaa;
 }
 
-#footer {
-	text-align:center;
-}
-
-#who, #contact, #weblife, #business, #impressum {
+#who, #contact, #weblife, #business, #impressum, #footer {
 	padding-left:20px;
 }
