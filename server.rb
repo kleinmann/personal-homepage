@@ -22,4 +22,8 @@ get '/impressum' do
   haml :impressum
 end
 
+not_found do
+  haml :not_found
+end
+
 File.open('tmp/homepage.pid', 'w') {|f| f.write Process.pid}
