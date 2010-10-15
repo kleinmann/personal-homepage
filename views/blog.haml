@@ -1,7 +1,7 @@
 %div#blog.clear.push-6.span-12
   - @page.each do |post|
-    %div.post.push-2
-      = haml :_blog_post, :layout => false, :locals => { :post => post }
+    %div.box.post
+      = haml :_blog_post, :layout => false, :locals => { :post => post, :full => false }
     %hr
 
   - if @page.prev?

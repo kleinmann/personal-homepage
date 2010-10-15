@@ -2,7 +2,7 @@ defaults: &defaults
   app_root: <%= File.dirname(File.expand_path(__FILE__)) + '/' %>
   dir_blogposts: data/blog/posts
   dir_tmp: tmp
-  posts_per_page: 1
+  posts_per_page: 2
 
 development:
   <<: *defaults

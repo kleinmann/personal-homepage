@@ -2,5 +2,11 @@
   %a{:href => "/blog/#{post.index.downcase}"}= post.title
 %sub Written on #{post.created_at.strftime("%B #{post.created_at.day.ordinalize}, %Y")}
 %p
-  :markdown
-    #{post.text}
+  - if full
+    :markdown
+      #{post.text}
+  - else
+    :markdown
+      #{post.teaser}
+    %p
+      %a{:href => "/blog/#{post.index.downcase}"} Read more

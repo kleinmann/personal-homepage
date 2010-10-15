@@ -2,26 +2,26 @@
 %html
   %head
     %title Uwe Kleinmann &laquo; Personal homepage
-    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
     
-    %link{:rel => "stylesheet", :href => "/css/bp/screen.css", :type => "text/css", :media => "screen,projection", :charset => "utf-8"}
-    %link{:rel => "stylesheet", :href => "/css/bp/print.css", :type => "text/css", :media => "print", :charset => "utf-8"}
+    %link{ :rel => "stylesheet", :href => "/css/bp/screen.css", :type => "text/css", :media => "screen,projection", :charset => "utf-8" }
+    %link{ :rel => "stylesheet", :href => "/css/bp/print.css", :type => "text/css", :media => "print", :charset => "utf-8" }
     /[if IE]
-      %link{:rel => "stylesheet", :href => "/css/bp/ie.css", :type => "text/css", :media => "screen,projection", :charset => "utf-8"}
-    %link{:rel => "stylesheet", :href => "/css/style.css", :type => "text/css", :media => "screen,projection,print", :charset => "utf-8"}
+      %link{ :rel => "stylesheet", :href => "/css/bp/ie.css", :type => "text/css", :media => "screen,projection", :charset => "utf-8" }
+    %link{ :rel => "stylesheet", :href => "/css/style.css", :type => "text/css", :media => "screen,projection,print", :charset => "utf-8" }
     
-    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js", :charset => "utf-8"}
+    %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js", :charset => "utf-8" }
     
   %body
     %div.container
-      %h1.column.span-24
-        %a{:href => "/"} (i)Uwe Kleinmann
+      %h1#title.span-24.last
+        %a{ :href => "/" } (i)Uwe Kleinmann
       
-      %div#content
+      %div#content.span-24.last
         = yield
       
-      %div#footer.clear.push-8.span-8
+      %div#footer.push-8.span-8.last
         &copy; 2010 by Uwe Kleinmann. All rights reserved.
         %br
-        %a{:href => "/impressum"} Impressum
+        %a{ :href => "/impressum" } Impressum
         (required by german law)
