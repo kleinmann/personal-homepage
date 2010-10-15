@@ -1,13 +1,36 @@
 GEM
   remote: http://www.rubygems.org/
   specs:
+    backports (1.18.2)
     daemons (1.1.0)
     eventmachine (0.12.10)
     haml (3.0.21)
+    hoe (2.6.2)
+      rake (>= 0.8.7)
+      rubyforge (>= 2.0.4)
+    json_pure (1.4.6)
+    monkey-lib (0.5.4)
+      backports
+    paginator (1.1.1)
+      hoe (>= 1.6.0)
     rack (1.2.1)
     rake (0.8.7)
+    rdiscount (1.6.5)
+    rubyforge (2.0.4)
+      json_pure (>= 1.1.7)
+    settingslogic (2.0.6)
     sinatra (1.0)
       rack (>= 1.0)
+    sinatra-advanced-routes (0.5.1)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+      sinatra-sugar (~> 0.5.0)
+    sinatra-reloader (0.5.0)
+      sinatra (~> 1.0)
+      sinatra-advanced-routes (~> 0.5.0)
+    sinatra-sugar (0.5.0)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
     thin (1.2.7)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -18,6 +41,10 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  paginator
   rake
+  rdiscount
+  settingslogic
   sinatra
+  sinatra-reloader
   thin

@@ -1,0 +1,6 @@
+%h2{:style => "margin-bottom:0"}
+  %a{:href => "/blog/#{post.index.downcase}"}= post.title
+%sub Written on #{post.created_at.strftime("%B #{post.created_at.day.ordinalize}, %Y")}
+%p
+  :markdown
+    #{post.text}
