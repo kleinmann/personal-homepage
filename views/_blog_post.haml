@@ -8,5 +8,6 @@
   - else
     :markdown
       #{post.teaser}
-    %p
-      %a{:href => "/blog/#{post.index.downcase}"} Read more
+    -if post.text != post.teaser
+      %p
+        %a{:href => "/blog/#{post.index.downcase}"} Read more
