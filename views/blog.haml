@@ -1,10 +1,10 @@
 %div#blog.clear.push-6.span-12
-  - @page.each do |post|
-    %div.box.post
-      = haml :_blog_post, :layout => false, :locals => { :post => post, :full => false }
-    %hr
+	- @page.each do |post|
+		%div.box.post
+			= haml :_blog_post, :layout => false, :locals => { :post => post, :full => false }
+		%hr
 
-  - if @page.prev?
-    %a{ :href => "/blog/#{@page.prev.number}" } Previous page
-  - if @page.next?
-    %a{ :href => "/blog/#{@page.next.number}", :style => "float:right" } Next page
+	- if @page.prev?
+		%a{ :href => "/blog/#{@page.prev.number}" } Previous page
+	- if @page.next?
+		%a{ :href => "/blog/#{@page.next.number}", :style => "float:right" } Next page

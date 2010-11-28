@@ -1,13 +1,13 @@
 %h2{:style => "margin-bottom:0"}
-  %a{:href => "/blog/#{post.index.downcase}"}= post.title
+	%a{:href => "/blog/#{post.index.downcase}"}= post.title
 %sub Written on #{post.created_at.strftime("%B #{post.created_at.day.ordinalize}, %Y")}
 %p
-  - if full
-    :markdown
-      #{post.text}
-  - else
-    :markdown
-      #{post.teaser}
-    -if post.text != post.teaser
-      %p
-        %a{:href => "/blog/#{post.index.downcase}"} Read more
+	- if full
+		:markdown
+			#{post.text}
+	- else
+		:markdown
+			#{post.teaser}
+		-if post.text != post.teaser
+			%p
+				%a{:href => "/blog/#{post.index.downcase}"} Read more

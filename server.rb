@@ -14,22 +14,22 @@ require 'blog/blog'
 require 'blog/blog_post'
 
 configure do	
-  enable :run
+	enable :run
 	set :app, 'kleinmann.org'
-  set :views, Settings.app_root + 'views'
-  set :public, Settings.app_root + 'public'
-  set :server, %w[thin mongrel webrick]
-  set :bind, 'localhost'
-  
-  set :haml, { :format => :html5 }
+	set :views, Settings.app_root + 'views'
+	set :public, Settings.app_root + 'public'
+	set :server, %w[thin mongrel webrick]
+	set :bind, 'localhost'
+	
+	set :haml, { :format => :html5 }
 end
 
 get '/' do
-  haml :index
+	haml :index
 end
 
 get '/impressum' do
-  haml :impressum
+	haml :impressum
 end
 
 get '/blog/?' do
@@ -57,7 +57,7 @@ get '/blog/:title' do |title|
 end
 
 not_found do
-  haml :not_found
+	haml :not_found
 end
 
 File.open(Settings.app_root + Settings.dir_tmp + '/homepage.pid', 'w') { |f| f.write Process.pid }
